@@ -1,8 +1,15 @@
+overLimit = false;
 volumeMeter(function(level) {
     // If higher than the value in our cookie, fire
     if (level > Cookies.get("max-volume")) {
-        $('body').css('background-color', 'red');
+        overLimit = true;
+    } else if (level < Cookies.get("reset-volume")) {
+        overLimit = false;
+    }
+
+    if (overLimit) {
+        $(".herriemeter").addClass("overlimit");
     } else {
-        $('body').css('background-color', 'black');
+        $(".herriemeter").removeClass("overlimit");
     }
 });

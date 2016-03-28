@@ -23,12 +23,10 @@ a.settings-link:hover {
 html,
 body {
   height: 100%;
-  background-color: #000;
+  background-color: #fff;
 }
 body {
-  color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -37,8 +35,6 @@ body {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -74,21 +70,19 @@ body {
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
+  color: #333;
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
+  border-bottom-color: #333;
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: #333;
+  border-bottom-color: #333;
 }
 
 @media (min-width: 768px) {
@@ -163,8 +157,20 @@ body {
 /*
  * Settings
  */
+.slider.slider-vertical {
+  height: 500px;
+  width: 20px;
+}
 .slider-volume-track {
   position: absolute;
   width: 100%;
+  background: red;
+  border-radius: 4px;
+}
+.herriemeter-settings {
+  width: 200px;
+  height: 200px;
+}
+.herriemeter.overlimit {
   background: red;
 }
