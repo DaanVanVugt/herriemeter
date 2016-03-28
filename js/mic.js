@@ -12,7 +12,7 @@ function volumeMeter(callback) {
             microphone = audioContext.createMediaStreamSource(stream);
             javascriptNode = audioContext.createScriptProcessor(2048, 1, 1);
 
-            analyser.smoothingTimeConstant = 0.8;
+            analyser.smoothingTimeConstant = 0.97;
             analyser.fftSize = 1024;
 
             microphone.connect(analyser);
